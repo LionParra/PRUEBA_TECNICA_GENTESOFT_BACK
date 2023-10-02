@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pruTecModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CARROS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MODELO" Type="nvarchar" MaxLength="200" />
+    <Property Name="COLOR" Type="nvarchar" MaxLength="200" />
+    <Property Name="KILOMETRAJE" Type="int" />
+    <Property Name="VALOR" Type="int" />
+    <Property Name="IMAGEN" Type="nvarchar(max)" />
+    <Property Name="FECHA_REGISTRO" Type="date" />
+    <Property Name="TIPO" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="MOTOS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MODELO" Type="nvarchar" MaxLength="200" />
+    <Property Name="COLOR" Type="nvarchar" MaxLength="200" />
+    <Property Name="KILOMETRAJE" Type="int" />
+    <Property Name="VALOR" Type="int" />
+    <Property Name="IMAGEN" Type="nvarchar(max)" />
+    <Property Name="FECHA_REGISTRO" Type="date" />
+    <Property Name="CILINDRAJE" Type="int" />
+    <Property Name="VELOCIDADES" Type="int" />
+    <Property Name="TIPO" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="VENTAS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="200" />
+    <Property Name="DOCUMENTO" Type="nvarchar" MaxLength="200" />
+    <Property Name="FECHA_REGISTRO" Type="date" />
+  </EntityType>
+  <EntityContainer Name="pruTecModelStoreContainer">
+    <EntitySet Name="CARROS" EntityType="Self.CARROS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MOTOS" EntityType="Self.MOTOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VENTAS" EntityType="Self.VENTAS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

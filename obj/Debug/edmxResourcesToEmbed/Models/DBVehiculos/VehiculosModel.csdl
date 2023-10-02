@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pruTecModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CARROS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MODELO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="COLOR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="KILOMETRAJE" Type="Int32" />
+    <Property Name="VALOR" Type="Int32" />
+    <Property Name="IMAGEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FECHA_REGISTRO" Type="DateTime" Precision="0" />
+    <Property Name="TIPO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MOTOS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MODELO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="COLOR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="KILOMETRAJE" Type="Int32" />
+    <Property Name="VALOR" Type="Int32" />
+    <Property Name="IMAGEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FECHA_REGISTRO" Type="DateTime" Precision="0" />
+    <Property Name="CILINDRAJE" Type="Int32" />
+    <Property Name="VELOCIDADES" Type="Int32" />
+    <Property Name="TIPO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="pruTecEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CARROS" EntityType="Self.CARROS" />
+    <EntitySet Name="MOTOS" EntityType="Self.MOTOS" />
+    <EntitySet Name="VENTAS" EntityType="pruTecModel.VENTAS" />
+  </EntityContainer>
+  <EntityType Name="VENTAS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DOCUMENTO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FECHA_REGISTRO" Type="DateTime" Precision="0" />
+  </EntityType>
+</Schema>

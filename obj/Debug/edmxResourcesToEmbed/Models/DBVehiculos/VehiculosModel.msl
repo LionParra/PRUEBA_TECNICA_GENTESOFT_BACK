@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pruTecModelStoreContainer" CdmEntityContainer="pruTecEntities">
+    <EntitySetMapping Name="CARROS">
+      <EntityTypeMapping TypeName="pruTecModel.CARROS">
+        <MappingFragment StoreEntitySet="CARROS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="KILOMETRAJE" ColumnName="KILOMETRAJE" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOTOS">
+      <EntityTypeMapping TypeName="pruTecModel.MOTOS">
+        <MappingFragment StoreEntitySet="MOTOS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="KILOMETRAJE" ColumnName="KILOMETRAJE" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="CILINDRAJE" ColumnName="CILINDRAJE" />
+          <ScalarProperty Name="VELOCIDADES" ColumnName="VELOCIDADES" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTAS">
+      <EntityTypeMapping TypeName="pruTecModel.VENTAS">
+        <MappingFragment StoreEntitySet="VENTAS">
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

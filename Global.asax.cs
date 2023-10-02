@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Http.Cors;
+using System.Net.Http.Formatting;
 
 namespace ApiPrueba
 {
@@ -21,6 +22,8 @@ namespace ApiPrueba
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             var corsAttr = new EnableCorsAttribute("http://localhost:3000", "*", "*");
             GlobalConfiguration.Configuration.EnableCors(corsAttr);
+            GlobalConfiguration.Configuration.Formatters.Clear();
+            GlobalConfiguration.Configuration.Formatters.Add(new JsonMediaTypeFormatter());
         }
     }
 }

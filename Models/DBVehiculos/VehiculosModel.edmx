@@ -29,9 +29,9 @@
           <Property Name="VALOR" Type="int" />
           <Property Name="IMAGEN" Type="nvarchar(max)" />
           <Property Name="FECHA_REGISTRO" Type="date" />
+          <Property Name="TIPO" Type="nvarchar" MaxLength="200" />
           <Property Name="CILINDRAJE" Type="int" />
           <Property Name="VELOCIDADES" Type="int" />
-          <Property Name="TIPO" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="VENTAS">
           <Key>
